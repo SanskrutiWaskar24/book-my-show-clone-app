@@ -4,8 +4,9 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
 // React Slick CSS
-import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+
 
 // Pages
 import PlayPage from "./pages/Play.page";
