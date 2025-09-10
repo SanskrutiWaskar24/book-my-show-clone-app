@@ -1,4 +1,5 @@
-import React, {useState}  from "react";
+import React, {useEffect, useState}  from "react";
+import axios from 'axios';
 
 //layout
 import DefaultLayoutHoc from "../layouts/Default.layout";
@@ -15,6 +16,15 @@ const HomePage = () => {
     const [Premier, setPremierMovies] = useState([]);
 
     const [onlineStreamEvents, setonlineStreamEvents] = useState([]);
+
+
+    useEffect(()=>{
+        const requestTopRatedMovies = async ()=> {
+            const getTopRatedMovies = await axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=0e26e1800896f917e962921a223a88db');
+            setRecommendedMovies(getTopRatedMovies.data.results)
+        }
+        requestTopRatedMovies();
+    } , [])
 
     return <>
 

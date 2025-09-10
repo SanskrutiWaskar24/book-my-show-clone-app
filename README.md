@@ -92,3 +92,6 @@ const MovieNavbar = () => {
 
 export default MovieNavbar;
  -->
+
+example request api url
+https://api.themoviedb.org/3/movie/550?api_key=0e26e1800896f917e962921a223a88db
