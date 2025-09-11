@@ -95,3 +95,5 @@ export default MovieNavbar;
 
 example request api url
 https://api.themoviedb.org/3/movie/550?api_key=0e26e1800896f917e962921a223a88db
+
+just copy the url from themoviedb api then after copying it append it with '?api_key=yourApiKey'
