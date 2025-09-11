@@ -18,7 +18,7 @@ import HomePage from "./pages/Home.page";
 
 axios.defaults.baseURL = "https://api.themoviedb.org/3"
 axios.defaults.params = {}
-axios.defaults.params["api_key"] = "0e26e1800896f917e962921a223a88db"
+axios.defaults.params["api_key"] = process.env.REACT_APP_API_KEY
 
 function App() {
   return (
