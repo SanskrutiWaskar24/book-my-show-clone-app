@@ -10,6 +10,8 @@ const Cast = (props) => {
                     alt="Cast and Crew" 
                     className="w-full h-full rounded-full object-center object-cover"/>
                 </div>
+                <h1 className="text-gray-800 text-xl my-2">{props.castName}</h1>
+                <h4 className="text-gray-500 text-sm">{props.role}</h4>
             </div>
         </div>
     )

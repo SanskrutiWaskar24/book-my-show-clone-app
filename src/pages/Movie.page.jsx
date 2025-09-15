@@ -70,7 +70,7 @@ const MoviePage = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 5,
+          slidesToShow: 3,
           slidesToScroll: 2,
           initailSlide: 1,
         },
@@ -96,14 +96,14 @@ const MoviePage = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 4,
+          slidesToScroll: 4,
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 2,
           initailSlide: 3,
         },
@@ -170,7 +170,37 @@ const MoviePage = () => {
           <div className="my-8">
             <hr />
           </div>
-  {/* XCLUSIVE Movies */}
+
+
+  {/* Cast Slider  */}
+          <div className="my-8">
+            <h2 className="text-gray-800 font-bold text-2xl mb-4">Cast and Crew</h2>
+            <Slider {...settingsCast}>
+              {cast.map((castData) => (
+                <Cast image={castData.profile_path} castName={castData.original_name} role={castData.character} />
+              ))}
+            </Slider>
+          </div>
+          
+           {/* horizontal line */}
+          <div className="my-8">
+            <hr />
+          </div>
+
+{/* Recommended Movies */}
+          <PosterSlider 
+          config={settings} 
+          title="Recommended Movies"
+          posters={similarMovies}
+          isDark={false}
+          />
+
+          {/* horizontal line */}
+          <div className="my-8">
+            <hr />
+          </div>
+
+{/* XCLUSIVE Movies */}
           <div className="my-8">
             <PosterSlider 
             config={settings} 
@@ -179,35 +209,7 @@ const MoviePage = () => {
             isDark={false}
             />
           </div>
-
-          {/* horizontal line */}
-          <div className="my-8">
-            <hr />
-          </div>
-
-  {/* Cast Slider  */}
-          <div className="my-8">
-            <h2 className="text-gray-800 font-bold text-2xl mb-4">Cast and Crew</h2>
-            <Slider {...settingsCast}>
-              {cast.map((castData) => (
-                <Cast image={castData.profile_path} castName={movie.original_name} role={movie.character} />
-              ))}
-            </Slider>
-          </div>
-
-
-
-          {/* horizontal line */}
-          <div className="my-8">
-            <hr />
-          </div>
-  {/* Recommended Movies */}
-          <PosterSlider 
-          config={settings} 
-          title="Recommended Movies"
-          posters={similarMovies}
-          isDark={false}
-          />
+  
     </div>
   </>
 };
