@@ -75,13 +75,13 @@ const HeroCarousel= () => {
         <>
         <div className='lg:hidden'>
             <HeroSlider {...settings}>
-            {images.map((image, index) => {
+            {images.map((image, index) => (
                 <div className='w-full h-56 md:h-80 py-3 key={index}'>
                     <img src={`https://image.tmdb.org/t/p/original${images.backdrop_path}`}
                     alt="hero banner"
                     className='w-full h-full rounded-md object-cover' />
                 </div>
-            })}
+            ))}
             </HeroSlider>
         </div>
 

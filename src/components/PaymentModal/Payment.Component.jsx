@@ -9,7 +9,22 @@ const PaymentModal = ({setIsOpen, isOpen, price}) => {
     }
 
     const launchRazorPay = () => {
-        
+        let options = {
+          key:"",
+          amout: price * 100,
+          currency:"INR",
+          name:"book-my-show-clone",
+          description:"Movie purchase or rent",
+          handler:() => {
+            setIsOpen(false);
+            alert("Paymnt Successfull");
+          },
+          theme:{color: "#c4242d"}
+        };
+
+        let razorPay = window.Razorpay(options);
+
+        razorPay.open();
     }
 
   return <>

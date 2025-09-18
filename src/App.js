@@ -16,7 +16,7 @@ import PlayPage from "./pages/Play.page";
 import MoviePage from "./pages/Movie.page";
 import HomePage from "./pages/Home.page";
 
-import MovieProvider from "./context/MovieContext"; 
+
 
 axios.defaults.baseURL = "https://api.themoviedb.org/3"
 axios.defaults.params = {}
